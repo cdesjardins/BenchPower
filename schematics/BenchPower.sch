@@ -153,8 +153,8 @@
 <pad name="P$18" x="5.5" y="10.5" drill="1.8" shape="square"/>
 <pad name="P$19" x="5.5" y="14.7" drill="1.8" shape="square"/>
 <pad name="P$20" x="5.5" y="18.9" drill="1.8" shape="square"/>
-<hole x="-7.3" y="18.9" drill="2.4"/>
-<hole x="-7.3" y="-18.9" drill="2.4"/>
+<hole x="-7.3" y="18.9" drill="3"/>
+<hole x="-7.3" y="-18.9" drill="3"/>
 <wire x1="-1.1" y1="-21.6" x2="-1.1" y2="21.6" width="0.127" layer="21"/>
 <wire x1="-1.1" y1="21.6" x2="-13.9" y2="21.6" width="0.127" layer="21"/>
 <wire x1="-1.1" y1="-21.6" x2="-13.9" y2="-21.6" width="0.127" layer="21"/>
