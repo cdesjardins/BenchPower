@@ -206,6 +206,26 @@
 <wire x1="5.59" y1="1.02" x2="5.59" y2="-3.29" width="0.127" layer="21"/>
 <wire x1="-0.76" y1="1.02" x2="5.59" y2="1.02" width="0.127" layer="21"/>
 </package>
+<package name="EG1213">
+<wire x1="5" y1="-1.9" x2="-5" y2="-1.9" width="0.127" layer="51"/>
+<pad name="2" x="0" y="0" drill="0.7" diameter="1.4224"/>
+<pad name="1" x="-3.27" y="0" drill="0.7" diameter="1.4224"/>
+<pad name="3" x="3.17" y="0" drill="0.7" diameter="1.4224"/>
+<text x="-2.7" y="2.4" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<wire x1="-5" y1="-5.71" x2="-5" y2="-1.91" width="0.127" layer="51"/>
+<wire x1="5" y1="-1.91" x2="5" y2="-5.71" width="0.127" layer="51"/>
+<wire x1="5" y1="-5.71" x2="2.1" y2="-5.71" width="0.127" layer="51"/>
+<wire x1="2.1" y1="-5.71" x2="1" y2="-5.71" width="0.127" layer="51"/>
+<wire x1="1" y1="-5.71" x2="-1" y2="-5.71" width="0.127" layer="51"/>
+<wire x1="-1" y1="-5.71" x2="-2.1" y2="-5.71" width="0.127" layer="51"/>
+<wire x1="-2.1" y1="-5.71" x2="-5" y2="-5.71" width="0.127" layer="51"/>
+<wire x1="-2.1" y1="-5.71" x2="-2.1" y2="-5.41" width="0.127" layer="51"/>
+<wire x1="-2.1" y1="-5.41" x2="2.1" y2="-5.41" width="0.127" layer="51"/>
+<wire x1="2.1" y1="-5.41" x2="2.1" y2="-5.71" width="0.127" layer="51"/>
+<wire x1="-1" y1="-5.71" x2="-1" y2="-10.81" width="0.127" layer="51"/>
+<wire x1="-1" y1="-10.81" x2="1" y2="-10.81" width="0.127" layer="51"/>
+<wire x1="1" y1="-10.81" x2="1" y2="-5.71" width="0.127" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="BINDINGPOST">
@@ -288,6 +308,27 @@
 <pin name="A" x="0" y="-7.62" visible="off" length="short" direction="pas" rot="R90"/>
 <pin name="E" x="0" y="7.62" visible="off" length="short" direction="pas" rot="R270"/>
 <pin name="S" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="TSU">
+<wire x1="0" y1="-3.175" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.905" y2="3.175" width="0.254" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="3.175" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="3.175" width="0.254" layer="94"/>
+<wire x1="-0.889" y1="0" x2="-1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="0" x2="-2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-3.175" y1="0" x2="-3.81" y2="0" width="0.1524" layer="94"/>
+<wire x1="-6.35" y1="1.905" x2="-5.08" y2="1.905" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="1.905" x2="-6.35" y2="0" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="-1.905" x2="-5.08" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="0" x2="-4.445" y2="0" width="0.1524" layer="94"/>
+<wire x1="-6.35" y1="0" x2="-6.35" y2="-1.905" width="0.254" layer="94"/>
+<text x="-8.255" y="-1.905" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="-5.715" y="2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="P" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="S" x="2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="O" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -390,6 +431,25 @@
 <connect gate="G$1" pin="A" pad="P$3"/>
 <connect gate="G$1" pin="E" pad="P$1"/>
 <connect gate="G$1" pin="S" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="EG1213" prefix="S">
+<description>&lt;b&gt;E-Switch right-angle slide SPDT&lt;/b&gt; Part #EG1213
+&lt;p&gt;http://www.ladyada.net/library/eagle&lt;/p&gt;</description>
+<gates>
+<gate name="1" symbol="TSU" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="EG1213">
+<connects>
+<connect gate="1" pin="O" pad="1"/>
+<connect gate="1" pin="P" pad="2"/>
+<connect gate="1" pin="S" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -3159,33 +3219,6 @@ Source: http://www.osram.convergy.de/ ... LO_LS_LY L89K.pdf</description>
 <text x="1.73" y="-2.178" size="1.016" layer="21" font="vector">A</text>
 <text x="-2.938" y="-2.178" size="1.016" layer="21" font="vector">K</text>
 </package>
-<package name="EG1213">
-<wire x1="-5" y1="1.9" x2="-0.7" y2="1.9" width="0.127" layer="21"/>
-<wire x1="-0.7" y1="1.9" x2="0.7" y2="1.9" width="0.127" layer="21"/>
-<wire x1="0.7" y1="1.9" x2="5" y2="1.9" width="0.127" layer="21"/>
-<wire x1="5" y1="1.9" x2="5" y2="-1.9" width="0.127" layer="21"/>
-<wire x1="5" y1="-1.9" x2="2.1" y2="-1.9" width="0.127" layer="21"/>
-<wire x1="2.1" y1="-1.9" x2="1" y2="-1.9" width="0.127" layer="21"/>
-<wire x1="1" y1="-1.9" x2="-1" y2="-1.9" width="0.127" layer="21"/>
-<wire x1="-1" y1="-1.9" x2="-2.1" y2="-1.9" width="0.127" layer="21"/>
-<wire x1="-2.1" y1="-1.9" x2="-5" y2="-1.9" width="0.127" layer="21"/>
-<wire x1="-5" y1="-1.9" x2="-5" y2="1.9" width="0.127" layer="21"/>
-<wire x1="-0.7" y1="1.9" x2="-0.7" y2="1.2" width="0.127" layer="21"/>
-<wire x1="-0.7" y1="1.2" x2="0.7" y2="1.2" width="0.127" layer="21"/>
-<wire x1="0.7" y1="1.2" x2="0.7" y2="1.9" width="0.127" layer="21"/>
-<wire x1="-2.1" y1="-1.9" x2="-2.1" y2="-1.6" width="0.127" layer="21"/>
-<wire x1="-2.1" y1="-1.6" x2="2.1" y2="-1.6" width="0.127" layer="21"/>
-<wire x1="2.1" y1="-1.6" x2="2.1" y2="-1.9" width="0.127" layer="21"/>
-<wire x1="-1" y1="-1.9" x2="-1" y2="-7" width="0.127" layer="21"/>
-<wire x1="-1" y1="-7" x2="1" y2="-7" width="0.127" layer="21"/>
-<wire x1="1" y1="-7" x2="1" y2="-1.9" width="0.127" layer="21"/>
-<pad name="2" x="0" y="0" drill="0.7" diameter="1.4224"/>
-<pad name="MT2" x="4.8" y="0" drill="1.4" diameter="2.54"/>
-<pad name="MT1" x="-4.8" y="0" drill="1.4" diameter="2.54"/>
-<pad name="1" x="-2" y="0" drill="0.7" diameter="1.4224"/>
-<pad name="3" x="1.9" y="0" drill="0.7" diameter="1.4224"/>
-<text x="-2.7" y="2.4" size="1.27" layer="21" font="vector">&gt;NAME</text>
-</package>
 </packages>
 <symbols>
 <symbol name="LED">
@@ -3212,30 +3245,6 @@ Source: http://www.osram.convergy.de/ ... LO_LS_LY L89K.pdf</description>
 <vertex x="-2.921" y="-2.413"/>
 <vertex x="-2.413" y="-2.921"/>
 </polygon>
-</symbol>
-<symbol name="TSU">
-<wire x1="0" y1="-3.175" x2="0" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="-1.905" y2="3.175" width="0.254" layer="94"/>
-<wire x1="1.27" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="2.54" y2="3.175" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="2.54" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="2.54" x2="-2.54" y2="3.175" width="0.254" layer="94"/>
-<wire x1="-0.889" y1="0" x2="-1.27" y2="0" width="0.1524" layer="94"/>
-<wire x1="-1.905" y1="0" x2="-2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="-3.175" y1="0" x2="-3.81" y2="0" width="0.1524" layer="94"/>
-<wire x1="-6.35" y1="1.905" x2="-5.08" y2="1.905" width="0.254" layer="94"/>
-<wire x1="-6.35" y1="1.905" x2="-6.35" y2="0" width="0.254" layer="94"/>
-<wire x1="-6.35" y1="-1.905" x2="-5.08" y2="-1.905" width="0.254" layer="94"/>
-<wire x1="-6.35" y1="0" x2="-4.445" y2="0" width="0.1524" layer="94"/>
-<wire x1="-6.35" y1="0" x2="-6.35" y2="-1.905" width="0.254" layer="94"/>
-<text x="-8.255" y="-1.905" size="1.778" layer="95" rot="R90">&gt;NAME</text>
-<text x="-5.715" y="2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="P" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
-<pin name="S" x="2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
-<pin name="O" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
-</symbol>
-<symbol name="MT">
-<pin name="MT" x="0" y="0" length="middle" direction="pas"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -3585,29 +3594,6 @@ Source: http://www.osram.convergy.de/</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="EG1213" prefix="S">
-<description>&lt;b&gt;E-Switch right-angle slide SPDT&lt;/b&gt; Part #EG1213
-&lt;p&gt;http://www.ladyada.net/library/eagle&lt;/p&gt;</description>
-<gates>
-<gate name="1" symbol="TSU" x="0" y="0"/>
-<gate name="G$1" symbol="MT" x="-7.62" y="-10.16"/>
-<gate name="G$2" symbol="MT" x="-7.62" y="-12.7"/>
-</gates>
-<devices>
-<device name="" package="EG1213">
-<connects>
-<connect gate="1" pin="O" pad="1"/>
-<connect gate="1" pin="P" pad="2"/>
-<connect gate="1" pin="S" pad="3"/>
-<connect gate="G$1" pin="MT" pad="MT1"/>
-<connect gate="G$2" pin="MT" pad="MT2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 </devicesets>
 </library>
 <library name="SparkFun-AnalogIC">
@@ -3751,7 +3737,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U$1" library="desjardins" deviceset="ATXPOWER" device=""/>
 <part name="U$2" library="ChrisD" deviceset="ARDUINO_PRO_MICRO" device=""/>
 <part name="U1" library="SparkFun-PowerIC" deviceset="V_REG_317" device="SINK"/>
-<part name="R1" library="SparkFun-Passives" deviceset="RESISTOR" device="AXIAL-0.3" value="100"/>
+<part name="R1" library="SparkFun-Passives" deviceset="RESISTOR" device="AXIAL-0.3" value="1000"/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="R2" library="SparkFun-Passives" deviceset="RESISTOR" device="AXIAL-0.3" value="240"/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -3786,7 +3772,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R3" library="SparkFun-Passives" deviceset="RESISTOR" device="AXIAL-0.3" value="100"/>
 <part name="R10" library="SparkFun-Passives" deviceset="RESISTOR" device="AXIAL-0.3" value="140"/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="S1" library="adafruit" deviceset="EG1213" device=""/>
+<part name="S2" library="desjardins" deviceset="EG1213" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3841,7 +3827,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="R3" gate="G$1" x="71.12" y="177.8"/>
 <instance part="R10" gate="G$1" x="86.36" y="177.8"/>
 <instance part="GND3" gate="1" x="60.96" y="177.8" rot="R270"/>
-<instance part="S1" gate="1" x="15.24" y="96.52"/>
+<instance part="S2" gate="1" x="17.78" y="121.92"/>
 </instances>
 <busses>
 </busses>
@@ -4037,11 +4023,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="91.44" y1="25.4" x2="93.98" y2="25.4" width="0.1524" layer="91"/>
 <label x="93.98" y="25.4" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="15.24" y1="30.48" x2="12.7" y2="30.48" width="0.1524" layer="91"/>
-<label x="5.08" y="30.48" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="12VHDR" class="0">
 <segment>
@@ -4060,9 +4041,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="93.98" y="55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="S1" gate="1" pin="O"/>
-<wire x1="12.7" y1="101.6" x2="12.7" y2="104.14" width="0.1524" layer="91"/>
-<label x="12.7" y="104.14" size="1.778" layer="95"/>
+<pinref part="S2" gate="1" pin="O"/>
+<wire x1="15.24" y1="127" x2="15.24" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -4337,9 +4317,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="91.44" y="177.8" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="S1" gate="1" pin="P"/>
-<wire x1="15.24" y1="91.44" x2="15.24" y2="88.9" width="0.1524" layer="91"/>
-<label x="10.16" y="86.36" size="1.778" layer="95"/>
+<pinref part="S2" gate="1" pin="P"/>
+<wire x1="17.78" y1="116.84" x2="17.78" y2="114.3" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="15.24" y1="30.48" x2="12.7" y2="30.48" width="0.1524" layer="91"/>
+<label x="2.54" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
