@@ -1,0 +1,1 @@
+![Shield](https://raw.github.com/cdesjardins/BenchPower/master/schematics/BenchPower.png)
