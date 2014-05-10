@@ -15,22 +15,20 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#ifndef UPSIDE_LIQUID_CRYSTAL_Hxx
+#define UPSIDE_LIQUID_CRYSTAL_Hxx
+#include <LiquidCrystal.h>
 
-#ifndef BP_POWER_SENSE_Hxx
-#define BP_POWER_SENSE_Hxx
-
-class PowerSense
+class UpsideLiquidCrystal : public LiquidCrystal
 {
 public:
-    PowerSense(int voltsPin, int currentPin);
-    float getCurrent();
-    float getVolts();
+    UpsideLiquidCrystal(uint8_t rs, uint8_t enable, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3);
+    void mybegin(uint8_t cols, uint8_t rows);
+    void writeStr(uint8_t x, uint8_t y, char* str);
 protected:
-    int readAvgPin(int pin);
-
+    int _cols;
+    int _rows;
 private:
-    int _voltsPin;
-    int _currentPin;
 };
 
 #endif

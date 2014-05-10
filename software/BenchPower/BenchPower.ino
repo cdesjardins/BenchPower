@@ -1,6 +1,26 @@
+/* 
+    Copyright (C) 2014 Chris Desjardins - cjd@chrisd.info
+    
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include <Arduino.h>
 #include <LiquidCrystal.h>
+#include "UpsideLiquidCrystal.h"
 #include "PowerSense.h"
 
+// digital pins
 #define BP_LCD_RS   12
 #define BP_LCD_EN   11
 #define BP_LCD_DB4  10
@@ -21,7 +41,7 @@ public:
       _powerSenseReg(BP_12V_REG_VOLTS, BP_12V_REG_AMPS),
       _powerSense(BP_12V_VOLTS, BP_12V_AMPS)
     {
-        _lcd.begin(16, 2);
+        _lcd.mybegin(16, 2);
     }
     
     
@@ -32,12 +52,8 @@ public:
         dtostrf(powerSense.getVolts(), 5, 2, output + strlen(output));
         strcat(output, "V ");
         dtostrf(powerSense.getCurrent(), 5, 2, output + strlen(output));
-        strcat(output, "A               ");
-        for (int x = 0; x < strlen(output); x++)
-        {
-            _lcd.setCursor(x, line);
-            _lcd.write(output[x]);
-        }
+        strcat(output, "                ");
+        _lcd.writeStr(0, line, output);
     }
     
     void processPowerSense()
@@ -56,7 +72,7 @@ public:
         processPowerSense();
     }
 private:
-    LiquidCrystal _lcd;
+    UpsideLiquidCrystal _lcd;
     PowerSense _powerSenseReg;
     PowerSense _powerSense;
     unsigned long _powerSenseTimeStamp;
