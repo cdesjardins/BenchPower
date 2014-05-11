@@ -19,7 +19,7 @@
 #include "PowerSense.h"
 #include "Arduino.h"
 
-#define VREF 5.21f
+#define AREF_5  5.0f
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
  
 PowerSense::PowerSense(int voltsPin, int currentPin)
@@ -32,16 +32,16 @@ PowerSense::PowerSense(int voltsPin, int currentPin)
 float PowerSense::getCurrent()
 {
     int pin = readAvgPin(_currentPin);
-    float scaledPin = pin * (VREF / 1023.0);
+    float scaledPin = pin * (AREF_5 / 1023.0);
     return scaledPin;
 }
 float PowerSense::getVolts()
 {
     int pin = readAvgPin(_voltsPin);
-    float scaledPin = pin * (VREF / 1023.0);
-    float divider = 0.4f;
-    float ret = scaledPin / divider;
-    return ret;
+    float scaledPin = pin * (AREF_5 / 1023.0);
+    /* Factor in the voltage divider on the 12v lines */
+    scaledPin *= 2.5f;
+    return scaledPin;
 }
 
 int compar(const void* a, const void* b)
@@ -56,7 +56,7 @@ int PowerSense::readAvgPin(int pin)
     // Then throw away the highest 10, and the lowest 10
     // Then average the remaining 20
     // to try to get a stable analog input
-    int pins[40];
+    int pins[10];
     for (int i = 0; i < ARRAY_SIZE(pins); i++)
     {
         pins[i] = analogRead(pin);
