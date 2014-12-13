@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="7.0.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.0125" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -1223,6 +1223,9 @@ design rules under a new name.</description>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
+<param name="AutoGrid" value="1"/>
+<param name="Efforts" value="0"/>
+<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
@@ -1338,16 +1341,18 @@ design rules under a new name.</description>
 <element name="R5" library="SparkFun-Passives" package="AXIAL-0.3" value="140" x="74.295" y="31.115" rot="R90"/>
 <element name="RV1" library="desjardins" package="3266W" value="" x="2.54" y="10.795"/>
 <element name="JP1" library="SparkFun-Connectors" package="1X02" value="M02PTH" x="2.8575" y="4.445"/>
-<element name="JP4" library="SparkFun-Connectors" package="1X02" value="M02PTH" x="48.5775" y="4.445"/>
 <element name="U5" library="SparkFun-AnalogIC" package="SOT23-5" value="" x="53.34" y="28.575" rot="R90"/>
 <element name="U6" library="SparkFun-AnalogIC" package="SOT23-5" value="" x="65.405" y="28.575" rot="R90"/>
 <element name="R8" library="SparkFun-Passives" package="AXIAL-0.3" value="gain" x="57.785" y="31.115" rot="R270"/>
 <element name="R9" library="SparkFun-Passives" package="AXIAL-0.3" value="gain" x="69.215" y="31.115" rot="R270"/>
 <element name="S2" library="desjardins" package="EG1213" value="EG1213" x="6.35" y="24.13" rot="R270"/>
 <element name="JP2" library="SparkFun-Connectors" package="1X02" value="M02PTH" x="28.8925" y="4.445"/>
-<element name="JP3" library="SparkFun-Connectors" package="1X02" value="M02PTH" x="74.93" y="11.43"/>
 <element name="R3" library="SparkFun-Passives" package="AXIAL-0.3" value="100" x="50.165" y="41.275"/>
 <element name="R10" library="SparkFun-Passives" package="AXIAL-0.3" value="140" x="62.865" y="41.275"/>
+<element name="JP3" library="SparkFun-Connectors" package="1X02" value="M02PTH" x="74.93" y="11.43"/>
+<element name="JP4" library="SparkFun-Connectors" package="1X02" value="M02PTH" x="48.5775" y="4.445"/>
+<element name="JP5" library="SparkFun-Connectors" package="1X02" value="M02PTH" x="48.5775" y="6.985"/>
+<element name="JP6" library="SparkFun-Connectors" package="1X02" value="M02PTH" x="28.8925" y="7.3025"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -1389,13 +1394,13 @@ design rules under a new name.</description>
 <contactref element="R9" pad="P$1"/>
 <contactref element="JP1" pad="2"/>
 <contactref element="JP1" pad="1"/>
-<contactref element="JP2" pad="2"/>
-<contactref element="JP2" pad="1"/>
-<contactref element="JP3" pad="2"/>
-<contactref element="JP3" pad="1"/>
-<contactref element="JP4" pad="2"/>
-<contactref element="JP4" pad="1"/>
 <contactref element="R3" pad="P$1"/>
+<contactref element="JP4" pad="1"/>
+<contactref element="JP4" pad="2"/>
+<contactref element="JP3" pad="1"/>
+<contactref element="JP3" pad="2"/>
+<contactref element="JP2" pad="1"/>
+<contactref element="JP2" pad="2"/>
 </signal>
 <signal name="5VSB">
 <contactref element="U$1" pad="P$9"/>
@@ -1518,6 +1523,12 @@ design rules under a new name.</description>
 <wire x1="60.325" y1="30.48" x2="60.325" y2="26.67" width="0.8128" layer="1"/>
 <wire x1="60.325" y1="26.67" x2="61.595" y2="25.4" width="0.8128" layer="1"/>
 <wire x1="61.595" y1="25.4" x2="74.93" y2="25.4" width="0.8128" layer="1"/>
+<contactref element="JP5" pad="2"/>
+<contactref element="JP5" pad="1"/>
+<wire x1="59.69" y1="6.35" x2="54.61" y2="6.35" width="0.8128" layer="1"/>
+<wire x1="54.61" y1="6.35" x2="53.975" y2="6.985" width="0.8128" layer="1"/>
+<wire x1="53.975" y1="6.985" x2="51.1175" y2="6.985" width="0.8128" layer="1"/>
+<wire x1="51.1175" y1="6.985" x2="48.5775" y2="6.985" width="0.8128" layer="1"/>
 </signal>
 <signal name="AMPS12VHDR">
 <contactref element="R6" pad="2"/>
@@ -1528,6 +1539,12 @@ design rules under a new name.</description>
 <wire x1="20.32" y1="22.86" x2="20.32" y2="6.35" width="0.8128" layer="1"/>
 <wire x1="20.32" y1="22.86" x2="29.845" y2="32.385" width="0.8128" layer="1"/>
 <wire x1="29.845" y1="32.385" x2="51.94" y2="32.385" width="0.8128" layer="1"/>
+<contactref element="JP6" pad="2"/>
+<contactref element="JP6" pad="1"/>
+<wire x1="20.32" y1="6.35" x2="25.4" y2="6.35" width="0.8128" layer="1"/>
+<wire x1="25.4" y1="6.35" x2="26.3525" y2="7.3025" width="0.8128" layer="1"/>
+<wire x1="26.3525" y1="7.3025" x2="28.8925" y2="7.3025" width="0.8128" layer="1"/>
+<wire x1="28.8925" y1="7.3025" x2="31.4325" y2="7.3025" width="0.8128" layer="1"/>
 </signal>
 <signal name="3.3V$2">
 <contactref element="U$1" pad="P$2"/>
