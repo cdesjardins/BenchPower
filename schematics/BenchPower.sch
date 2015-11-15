@@ -632,108 +632,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
-<library name="con-thomas-betts">
-<description>&lt;b&gt;Thomas &amp; Betts Connectors&lt;/b&gt;&lt;p&gt;
-Based on Thomas &amp; Betts Catalog &lt;i&gt;Electronioc Interconnects European Edition 1998&lt;/i&gt;.&lt;p&gt;
-Created 10.06.1999&lt;br&gt;
-Packages changed/corrected 22.02.2006 librarian@cadsoft.de&lt;br&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="9090-4R">
-<description>&lt;b&gt;THOMAS&amp;BETTS&lt;/b&gt; Disk Drive Power Horizontal&lt;p&gt;</description>
-<wire x1="-11.45" y1="-5.45" x2="-11.45" y2="6.675" width="0.2032" layer="21"/>
-<wire x1="-11.45" y1="6.675" x2="11.45" y2="6.675" width="0.2032" layer="21"/>
-<wire x1="11.45" y1="6.675" x2="11.45" y2="-5.45" width="0.2032" layer="21"/>
-<wire x1="11.45" y1="-5.45" x2="9.325" y2="-5.45" width="0.2032" layer="21"/>
-<wire x1="9.325" y1="-5.45" x2="-9.5" y2="-5.45" width="0.2032" layer="51"/>
-<wire x1="-9.5" y1="-5.45" x2="-11.45" y2="-5.45" width="0.2032" layer="21"/>
-<pad name="1" x="-7.62" y="-6.35" drill="1.6" diameter="2.6" shape="long" rot="R90"/>
-<pad name="2" x="-2.54" y="-6.35" drill="1.6" diameter="2.6" shape="long" rot="R90"/>
-<pad name="3" x="2.54" y="-6.35" drill="1.6" diameter="2.6" shape="long" rot="R90"/>
-<pad name="4" x="7.62" y="-6.35" drill="1.6" diameter="2.6" shape="long" rot="R90"/>
-<text x="-12.7" y="-5.08" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="-6.35" y="-1.27" size="1.27" layer="27">&gt;VALUE</text>
-<hole x="-5.08" y="3.81" drill="4"/>
-<hole x="5.08" y="3.81" drill="4"/>
-<hole x="-10.16" y="-3.81" drill="2.5"/>
-<hole x="10.16" y="-3.81" drill="2.5"/>
-</package>
-<package name="9090-4V">
-<description>&lt;b&gt;THOMAS&amp;BETTS&lt;/b&gt; Disk Drive Power Vertical&lt;p&gt;</description>
-<wire x1="11.45" y1="-4.03" x2="-11.45" y2="-4.03" width="0.2032" layer="21"/>
-<wire x1="-11.45" y1="-4.03" x2="-11.45" y2="2.03" width="0.2032" layer="21"/>
-<wire x1="-11.45" y1="2.03" x2="-9.45" y2="4.03" width="0.2032" layer="21"/>
-<wire x1="-9.45" y1="4.03" x2="9.45" y2="4.03" width="0.2032" layer="21"/>
-<wire x1="9.45" y1="4.03" x2="11.45" y2="2.03" width="0.2032" layer="21"/>
-<wire x1="11.45" y1="2.03" x2="11.45" y2="-4.03" width="0.2032" layer="21"/>
-<pad name="1" x="-7.62" y="0" drill="1.6" diameter="2.6" shape="long" rot="R90"/>
-<pad name="2" x="-2.54" y="0" drill="1.6" diameter="2.6" shape="long" rot="R90"/>
-<pad name="3" x="2.54" y="0" drill="1.6" diameter="2.6" shape="long" rot="R90"/>
-<pad name="4" x="7.62" y="0" drill="1.6" diameter="2.6" shape="long" rot="R90"/>
-<text x="-12.7" y="-3.81" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="-7.62" y="5.08" size="1.27" layer="27">&gt;VALUE</text>
-</package>
-</packages>
-<symbols>
-<symbol name="DISKDRIVE">
-<wire x1="0" y1="6.35" x2="0" y2="-3.81" width="0.254" layer="94"/>
-<wire x1="0" y1="-3.81" x2="3.81" y2="-3.81" width="0.254" layer="94"/>
-<wire x1="3.81" y1="-3.81" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-2.54" x2="5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="5.08" x2="3.81" y2="6.35" width="0.254" layer="94"/>
-<wire x1="3.81" y1="6.35" x2="0" y2="6.35" width="0.254" layer="94"/>
-<text x="0" y="8.89" size="1.778" layer="95">&gt;NAME</text>
-<text x="0" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="-2.54" y="5.08" visible="pin" length="short" direction="pas" swaplevel="1"/>
-<pin name="2" x="-2.54" y="2.54" visible="pin" length="short" direction="pas" swaplevel="1"/>
-<pin name="3" x="-2.54" y="0" visible="pin" length="short" direction="pas" swaplevel="1"/>
-<pin name="4" x="-2.54" y="-2.54" visible="pin" length="short" direction="pas" swaplevel="1"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="9090-4" prefix="X">
-<description>&lt;b&gt;Disk Drive Power&lt;/b&gt; four position&lt;p&gt;
-Source: Thomas &amp; Betts Electronic Interconnects Eiropean Edition 1998</description>
-<gates>
-<gate name="G$1" symbol="DISKDRIVE" x="0" y="0" swaplevel="1"/>
-</gates>
-<devices>
-<device name="R" package="9090-4R">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="unknown" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="V" package="9090-4V">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="unknown" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-PowerIC">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 In this library you'll find drivers, regulators, and amplifiers.&lt;br&gt;&lt;br&gt;
@@ -5018,7 +4916,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="FRAME1" library="ChrisD" deviceset="FRAME-LETTER" device=""/>
 <part name="U$5" library="desjardins" deviceset="BINDINGPOST" device=""/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="X2" library="con-thomas-betts" deviceset="9090-4" device="R"/>
 <part name="ATXCONN" library="desjardins" deviceset="ATXPOWER" device=""/>
 <part name="ARDUINOMICRO" library="ChrisD" deviceset="ARDUINO_PRO_MICRO" device=""/>
 <part name="U1" library="SparkFun-PowerIC" deviceset="V_REG_317" device="SINK"/>
@@ -5042,7 +4939,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="RV1" library="desjardins" deviceset="POT" device="3266"/>
 <part name="GND17" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND18" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="JP1" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="U5" library="SparkFun-AnalogIC" deviceset="INA139" device=""/>
 <part name="U6" library="SparkFun-AnalogIC" deviceset="INA139" device=""/>
 <part name="GND19" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -5075,7 +4971,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="FRAME1" gate="G$2" x="147.32" y="0"/>
 <instance part="U$5" gate="G$1" x="33.02" y="91.44"/>
 <instance part="GND1" gate="1" x="33.02" y="73.66"/>
-<instance part="X2" gate="G$1" x="111.76" y="114.3"/>
 <instance part="ATXCONN" gate="G$1" x="129.54" y="76.2"/>
 <instance part="ARDUINOMICRO" gate="G$1" x="76.2" y="45.72"/>
 <instance part="U1" gate="G$1" x="154.94" y="172.72"/>
@@ -5090,7 +4985,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND10" gate="1" x="149.86" y="88.9" rot="R180"/>
 <instance part="LED1" gate="G$1" x="30.48" y="30.48" rot="R90"/>
 <instance part="GND11" gate="1" x="96.52" y="53.34" rot="R90"/>
-<instance part="GND12" gate="1" x="58.42" y="48.26" rot="R270"/>
+<instance part="GND12" gate="1" x="50.8" y="48.26" rot="R270"/>
 <instance part="R6" gate="G$1" x="180.34" y="45.72"/>
 <instance part="R7" gate="G$1" x="180.34" y="53.34"/>
 <instance part="R4" gate="G$1" x="22.86" y="177.8"/>
@@ -5099,7 +4994,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="RV1" gate="G$1" x="30.48" y="50.8" rot="R90"/>
 <instance part="GND17" gate="1" x="17.78" y="50.8" rot="R270"/>
 <instance part="GND18" gate="1" x="86.36" y="154.94"/>
-<instance part="JP1" gate="G$1" x="76.2" y="172.72"/>
 <instance part="U5" gate="G$1" x="203.2" y="93.98"/>
 <instance part="U6" gate="G$1" x="203.2" y="154.94"/>
 <instance part="GND19" gate="1" x="210.82" y="71.12"/>
@@ -5181,16 +5075,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="LED1" gate="G$1" pin="C"/>
 </segment>
 <segment>
-<pinref part="X2" gate="G$1" pin="2"/>
-<wire x1="109.22" y1="116.84" x2="106.68" y2="116.84" width="0.1524" layer="91"/>
-<label x="104.14" y="116.84" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X2" gate="G$1" pin="3"/>
-<wire x1="109.22" y1="114.3" x2="106.68" y2="114.3" width="0.1524" layer="91"/>
-<label x="104.14" y="114.3" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="LCD" gate="G$1" pin="GND"/>
 <wire x1="45.72" y1="149.86" x2="48.26" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="149.86" x2="48.26" y2="152.4" width="0.1524" layer="91"/>
@@ -5208,7 +5092,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="ARDUINOMICRO" gate="G$1" pin="GND0"/>
-<wire x1="63.5" y1="48.26" x2="60.96" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="48.26" x2="53.34" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="GND12" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -5248,15 +5132,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="GND13" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="2"/>
-<wire x1="83.82" y1="175.26" x2="86.36" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="GND18" gate="1" pin="GND"/>
 <wire x1="86.36" y1="175.26" x2="86.36" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="86.36" y1="172.72" x2="86.36" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="162.56" x2="86.36" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="160.02" x2="86.36" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="172.72" x2="86.36" y2="172.72" width="0.1524" layer="91"/>
 <junction x="86.36" y="172.72"/>
 <pinref part="JP4" gate="G$1" pin="1"/>
 <wire x1="88.9" y1="175.26" x2="86.36" y2="175.26" width="0.1524" layer="91"/>
@@ -5268,7 +5148,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="83.82" y1="162.56" x2="86.36" y2="162.56" width="0.1524" layer="91"/>
 <junction x="86.36" y="160.02"/>
 <junction x="86.36" y="162.56"/>
-<junction x="86.36" y="175.26"/>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
@@ -5290,11 +5169,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="ATXCONN" gate="G$1" pin="12V"/>
 <wire x1="114.3" y1="66.04" x2="111.76" y2="66.04" width="0.1524" layer="91"/>
 <label x="104.14" y="66.04" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X2" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="119.38" x2="106.68" y2="119.38" width="0.1524" layer="91"/>
-<label x="99.06" y="119.38" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="ARDUINOMICRO" gate="G$1" pin="VIN"/>
@@ -5475,9 +5349,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="45.72" y="142.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="ARDUINOMICRO" gate="G$1" pin="D12"/>
-<wire x1="63.5" y1="20.32" x2="53.34" y2="20.32" width="0.1524" layer="91"/>
-<label x="50.8" y="20.32" size="1.778" layer="95"/>
+<pinref part="ARDUINOMICRO" gate="G$1" pin="TX1"/>
+<wire x1="63.5" y1="55.88" x2="60.96" y2="55.88" width="0.1524" layer="91"/>
+<label x="53.34" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LCD_EN" class="0">
@@ -5487,9 +5361,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="45.72" y="137.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="ARDUINOMICRO" gate="G$1" pin="D11"/>
-<wire x1="63.5" y1="22.86" x2="53.34" y2="22.86" width="0.1524" layer="91"/>
-<label x="50.8" y="22.86" size="1.778" layer="95"/>
+<pinref part="ARDUINOMICRO" gate="G$1" pin="RX1"/>
+<wire x1="63.5" y1="53.34" x2="60.96" y2="53.34" width="0.1524" layer="91"/>
+<label x="53.34" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LCD_DB7" class="0">
@@ -5499,9 +5373,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="45.72" y="116.84" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="ARDUINOMICRO" gate="G$1" pin="D7"/>
-<wire x1="63.5" y1="33.02" x2="53.34" y2="33.02" width="0.1524" layer="91"/>
-<label x="50.8" y="33.02" size="1.778" layer="95"/>
+<pinref part="ARDUINOMICRO" gate="G$1" pin="A2"/>
+<wire x1="91.44" y1="33.02" x2="93.98" y2="33.02" width="0.1524" layer="91"/>
+<label x="93.98" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LCD_DB6" class="0">
@@ -5511,9 +5385,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="45.72" y="119.38" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="ARDUINOMICRO" gate="G$1" pin="D8"/>
-<wire x1="63.5" y1="30.48" x2="53.34" y2="30.48" width="0.1524" layer="91"/>
-<label x="50.8" y="30.48" size="1.778" layer="95"/>
+<pinref part="ARDUINOMICRO" gate="G$1" pin="A3"/>
+<wire x1="91.44" y1="35.56" x2="93.98" y2="35.56" width="0.1524" layer="91"/>
+<label x="93.98" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LCD_DB5" class="0">
@@ -5523,9 +5397,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="45.72" y="121.92" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="ARDUINOMICRO" gate="G$1" pin="D9"/>
-<wire x1="63.5" y1="27.94" x2="53.34" y2="27.94" width="0.1524" layer="91"/>
-<label x="50.8" y="27.94" size="1.778" layer="95"/>
+<pinref part="ARDUINOMICRO" gate="G$1" pin="D3"/>
+<wire x1="63.5" y1="43.18" x2="60.96" y2="43.18" width="0.1524" layer="91"/>
+<label x="53.34" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LCD_DB4" class="0">
@@ -5535,9 +5409,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="45.72" y="124.46" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="ARDUINOMICRO" gate="G$1" pin="D10"/>
-<wire x1="63.5" y1="25.4" x2="53.34" y2="25.4" width="0.1524" layer="91"/>
-<label x="50.8" y="25.4" size="1.778" layer="95"/>
+<pinref part="ARDUINOMICRO" gate="G$1" pin="D2"/>
+<wire x1="63.5" y1="45.72" x2="60.96" y2="45.72" width="0.1524" layer="91"/>
+<label x="53.34" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="12VHDRCURRENT" class="0">
@@ -5603,11 +5477,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="JP7" gate="G$1" pin="VBUS"/>
 <wire x1="144.78" y1="116.84" x2="142.24" y2="116.84" width="0.1524" layer="91"/>
 <label x="134.62" y="116.84" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X2" gate="G$1" pin="4"/>
-<wire x1="109.22" y1="111.76" x2="106.68" y2="111.76" width="0.1524" layer="91"/>
-<label x="101.6" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
