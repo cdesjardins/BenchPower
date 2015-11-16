@@ -4957,6 +4957,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="JP7" library="SparkFun-Connectors" deviceset="USB" device="-A-S"/>
 <part name="JP8" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="GND14" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5012,6 +5013,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="JP7" gate="G$1" x="147.32" y="114.3"/>
 <instance part="JP8" gate="G$1" x="180.34" y="147.32" rot="R90"/>
 <instance part="GND4" gate="1" x="185.42" y="157.48" rot="R90"/>
+<instance part="GND14" gate="1" x="139.7" y="114.3" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -5157,6 +5159,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="JP7" gate="G$1" pin="GND"/>
 <wire x1="144.78" y1="114.3" x2="142.24" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="GND14" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="JP8" gate="G$1" pin="1"/>
@@ -5248,6 +5251,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="180.34" y1="160.02" x2="180.34" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="157.48" x2="180.34" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="JP8" gate="G$1" pin="2"/>
+<junction x="180.34" y="157.48"/>
 </segment>
 </net>
 <net name="5VARDU" class="0">
@@ -5290,6 +5294,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="30.48" y1="177.8" x2="33.02" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="177.8" x2="30.48" y2="172.72" width="0.1524" layer="91"/>
 <label x="22.86" y="170.18" size="1.778" layer="95"/>
+<junction x="30.48" y="177.8"/>
 </segment>
 </net>
 <net name="AMPS12VREG" class="0">
@@ -5465,6 +5470,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="30.48" y1="165.1" x2="33.02" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="165.1" x2="30.48" y2="160.02" width="0.1524" layer="91"/>
 <label x="22.86" y="157.48" size="1.778" layer="95"/>
+<junction x="30.48" y="165.1"/>
 </segment>
 </net>
 <net name="5VATX" class="0">
