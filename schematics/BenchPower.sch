@@ -4955,9 +4955,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="JP5" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="JP6" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="JP7" library="SparkFun-Connectors" deviceset="USB" device="-A-S"/>
-<part name="JP8" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND14" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="JP1" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
+<part name="JP3" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 </parts>
 <sheets>
 <sheet>
@@ -5011,9 +5012,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="JP5" gate="G$1" x="76.2" y="144.78"/>
 <instance part="JP6" gate="G$1" x="96.52" y="144.78"/>
 <instance part="JP7" gate="G$1" x="147.32" y="114.3"/>
-<instance part="JP8" gate="G$1" x="180.34" y="147.32" rot="R90"/>
 <instance part="GND4" gate="1" x="185.42" y="157.48" rot="R90"/>
 <instance part="GND14" gate="1" x="139.7" y="114.3" rot="R270"/>
+<instance part="JP1" gate="G$1" x="157.48" y="144.78" rot="R180"/>
+<instance part="JP3" gate="G$1" x="182.88" y="147.32" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -5162,9 +5164,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="GND14" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="JP8" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="154.94" x2="182.88" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
+<pinref part="JP3" gate="G$1" pin="1"/>
+<wire x1="182.88" y1="157.48" x2="182.88" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="12VHDR" class="0">
@@ -5194,14 +5196,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="R6" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="IN"/>
-<wire x1="147.32" y1="172.72" x2="144.78" y2="172.72" width="0.1524" layer="91"/>
-<label x="137.16" y="172.72" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U5" gate="G$1" pin="VIN+"/>
 <wire x1="205.74" y1="109.22" x2="205.74" y2="111.76" width="0.1524" layer="91"/>
 <label x="205.74" y="106.68" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="G$1" pin="1"/>
+<wire x1="149.86" y1="147.32" x2="147.32" y2="147.32" width="0.1524" layer="91"/>
+<label x="142.24" y="147.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -5249,8 +5251,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="154.94" y1="157.48" x2="180.34" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="180.34" y1="160.02" x2="180.34" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="G$1" pin="2"/>
 <wire x1="180.34" y1="157.48" x2="180.34" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="JP8" gate="G$1" pin="2"/>
 <junction x="180.34" y="157.48"/>
 </segment>
 </net>
@@ -5483,6 +5485,23 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="JP7" gate="G$1" pin="VBUS"/>
 <wire x1="144.78" y1="116.84" x2="142.24" y2="116.84" width="0.1524" layer="91"/>
 <label x="134.62" y="116.84" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="G$1" pin="3"/>
+<wire x1="149.86" y1="142.24" x2="147.32" y2="142.24" width="0.1524" layer="91"/>
+<label x="142.24" y="142.24" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="REGIN" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="IN"/>
+<wire x1="147.32" y1="172.72" x2="144.78" y2="172.72" width="0.1524" layer="91"/>
+<label x="137.16" y="172.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="G$1" pin="2"/>
+<wire x1="149.86" y1="144.78" x2="147.32" y2="144.78" width="0.1524" layer="91"/>
+<label x="142.24" y="144.78" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
